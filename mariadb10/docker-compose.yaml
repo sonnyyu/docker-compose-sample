@@ -1,0 +1,18 @@
+services:
+  database:
+    image: mariadb:10.7.3
+    container_name: mariadb1073
+    restart: always
+#    user: 1000:1000
+    environment:
+#      MYSQL_DATABASE: 'db'   
+#      MYSQL_USER: 'user'
+#      MYSQL_PASSWORD: 'password'      
+      MYSQL_ROOT_PASSWORD: 'password'
+#      MYSQL_ROOT_HOST: '%' 
+    ports:
+      - '127.0.0.1:3306:3306'
+    volumes:
+#      - ~/mysql/mysqldata:/var/lib/mysql
+#     - ~/apps/mariadb/data:/var/lib/mysql
+      - ./dbdata:/var/lib/mysql

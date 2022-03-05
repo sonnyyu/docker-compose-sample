@@ -1,0 +1,12 @@
+services:
+ mongodb:
+  image : mongo:4.4.12
+  container_name: mongodb
+  environment:
+  - PUID=1000
+  - PGID=1000
+  volumes:
+  - ./mongodata:/data/db
+  ports:
+  - 27017:27017
+  restart: unless-stopped
