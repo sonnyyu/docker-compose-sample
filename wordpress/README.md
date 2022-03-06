@@ -1,4 +1,4 @@
-## WordPress with MySQL
+## WordPress with External MySQL
 This example defines one of the basic setups for WordPress. More details on how this works can be found on the official [WordPress image page](https://hub.docker.com/_/wordpress).
 
 
@@ -12,12 +12,6 @@ Project structure:
 [_docker-compose.yaml_](docker-compose.yaml)
 ```
 services:
-  db:
-    # We use a mariadb image which supports both amd64 & arm64 architecture
-    image: mariadb:10.6.4-focal
-    # If you really want to use MySQL, uncomment the following line
-    #image: mysql:8.0.27
-    ...
   wordpress:
     image: wordpress:latest
     ports:
