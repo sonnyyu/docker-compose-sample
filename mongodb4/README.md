@@ -1,3 +1,11 @@
+# Getting started
+```bash
+docker-compose up -d
+```
+# Quit and remove volume
+```bash
+docker-compose down  -v
+```
 # Use mongocli
 ```bash
 mongo
