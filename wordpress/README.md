@@ -1,5 +1,5 @@
 ## WordPress with External MySQL
-This example defines one of the basic setups for WordPress. More details on how this works can be found on the official [WordPress image page](https://hub.docker.com/_/wordpress).
+This example defines one of the basic setups for WordPress. More details on how this works can be found on the official (https://hub.docker.com/_/wordpress).
 
 
 Project structure:
@@ -68,7 +68,6 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 Navigate to `http://localhost:80` in your web browser to access WordPress.
 
-![page](output.jpg)
 
 Stop and remove the containers
 
