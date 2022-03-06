@@ -6,7 +6,7 @@ docker-compose up -d
 ```bash
 docker-compose down  -v
 ```
-# In case ERROR 2013 (HY000)
+# In case ERROR 2013 (HY000):Lost connection to MySQL server at 'handshake: reading initial communication packet', system error: 11
 ```bash
 docker ps -a
 docker restart c11792575909
