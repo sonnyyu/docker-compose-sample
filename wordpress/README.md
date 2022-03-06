@@ -39,12 +39,10 @@ CREATE USER 'wordpress'@'%' IDENTIFIED BY 'wordpress';
 GRANT ALL ON wordpress.* TO 'wordpress'@'%';
 FLUSH PRIVILEGES;
 ```
-# Edit docker-compose.yaml 
+# Edit docker-compose.yaml WORDPRESS_DB_HOST as mysql IP
 ```bash
-CREATE DATABASE wordpress;
-CREATE USER 'wordpress'@'%' IDENTIFIED BY 'wordpress';
-GRANT ALL ON wordpress.* TO 'wordpress'@'%';
-FLUSH PRIVILEGES;
+    environment:
+      - WORDPRESS_DB_HOST=192.168.1.204
 ```
 
 ## Deploy with docker-compose
