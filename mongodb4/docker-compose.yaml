@@ -2,9 +2,9 @@ services:
  mongodb:
   image : mongo:4.4.12
   container_name: mongodb4
-  environment:
-  - PUID=1000
-  - PGID=1000
+ # environment:
+ # - PUID=1000
+ # - PGID=1000
   volumes:
   - ./mongodata:/data/db
   ports:
