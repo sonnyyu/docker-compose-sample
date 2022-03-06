@@ -1,3 +1,27 @@
+# Getting started
+```bash
+docker-compose up -d
+```
+# Quit and remove volume
+```bash
+docker-compose down  -v
+```
+# In case ERROR 2013 (HY000):Lost connection to MySQL server at 'handshake: reading initial communication packet', system error: 11
+```bash
+docker restart  $(docker ps | grep 'mysql' | awk '{ print $1 }')
+```
+# Test mysql login from docker host
+```bash
+mysql -uroot -h127.0.0.1 -ppassword
+```
+# Create DB, User and grant access 
+```bash
+CREATE DATABASE wordpress;
+CREATE USER 'wordpress'@'%' IDENTIFIED BY 'wordpress';
+GRANT ALL ON wordpress.* TO 'wordpress'@'%';
+FLUSH PRIVILEGES;
+```
+
 # What is MySQL?
 
 MySQL is the world's most popular open source database. With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications, covering the entire range from personal projects and websites, via online shops and information services, all the way to high profile web properties including Facebook, Twitter, YouTube, Yahoo! and many more.
