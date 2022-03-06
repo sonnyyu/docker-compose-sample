@@ -39,6 +39,13 @@ CREATE USER 'wordpress'@'%' IDENTIFIED BY 'wordpress';
 GRANT ALL ON wordpress.* TO 'wordpress'@'%';
 FLUSH PRIVILEGES;
 ```
+# Edit docker-compose.yaml 
+```bash
+CREATE DATABASE wordpress;
+CREATE USER 'wordpress'@'%' IDENTIFIED BY 'wordpress';
+GRANT ALL ON wordpress.* TO 'wordpress'@'%';
+FLUSH PRIVILEGES;
+```
 
 ## Deploy with docker-compose
 
