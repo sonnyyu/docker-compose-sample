@@ -32,11 +32,11 @@ port 80 of the host as specified in the compose file.
 
 ```
 $ docker-compose up -d
-Creating network "wordpress-mysql_default" with the default driver
-Creating volume "wordpress-mysql_db_data" with default driver
-...
-Creating wordpress-mysql_db_1        ... done
-Creating wordpress-mysql_wordpress_1 ... done
+Creating network "wordpress_default" with the default driver
+Creating volume "wordpress_db_data" with default driver
+Pulling wordpress (wordpress:latest)...
+latest: Pulling from library/wordpress
+f7a1c6dad281: Pull complete
 ```
 
 
