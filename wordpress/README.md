@@ -28,6 +28,18 @@ port 80 of the host as specified in the compose file.
 > You still can use the MySQL image by uncommenting the following line in the Compose file   
 > `#image: mysql:8.0.27`
 
+# Test mysql login from docker host
+```bash
+mysql -uroot -h127.0.0.1 -ppassword
+```
+# Create DB, User and grant access 
+```bash
+CREATE DATABASE wordpress;
+CREATE USER 'wordpress'@'%' IDENTIFIED BY 'wordpress';
+GRANT ALL ON wordpress.* TO 'wordpress'@'%';
+FLUSH PRIVILEGES;
+```
+
 ## Deploy with docker-compose
 
 ```
